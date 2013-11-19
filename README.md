@@ -6,7 +6,7 @@ This project is aimed at helping developers in the process of getting new apps t
 ##### Click here for <a href="http://wix.github.com/wix-ui-lib" target="_blank">demo</a> and documentation.
 
 ## Overview
-Wix UI Library is a extension of the Wix SDK. It provides common CSS, HTML and JS Components which follow Wix product guide for Apps. Wix UI library will deploy itself as a sub namespace of the Wix SDK as Wix.UI.
+Wix UI Library is an extension of the Wix SDK. It provides common CSS, HTML and JS Components which follow Wix product guide for Apps. Wix UI library will deploy itself as a sub namespace of the Wix SDK as Wix.UI.
 
 ### Dependencies
 
@@ -128,7 +128,7 @@ The **Wix.UI** Javascript components are basically a set of [jQuery][jquery] Plu
 ### Special HTML attributes
 Wix UI library includes custom attributes which enable components initilization from within the HTML markup.
 
-**wix-ctrl -** component's controller decleration
+**wix-ctrl -** component's controller declaration
 
 **wix-options -** component initilization
 
@@ -177,15 +177,15 @@ In this way you need to subscribe to chages and set values directly on the jQuer
 
 ###Model
 
-In order to set/get component values, you can add a `wix-model` attribute to the component markup this will bind them to the **Wix.UI** model.
+In order to set/get component values, you can add a `wix-model` attribute to the component markup. This will bind them to the **Wix.UI** model.
 
 **wix-model** attribute sets a key to access the component value from Wix.UI and subscribe to change events.
 
-Then you will be able to use the **Wix.UI.set(key, value)** or **Wix.UI.get(key)** to update the component state and retrive the component value.
+Then you will be able to use the **Wix.UI.set(key, value)** or **Wix.UI.get(key)** to update the component state and retrieve the component value.
     
     <div wix-model="myKey" wix-ctrl="ComponentName" wix-options="{option: 'value'}"></div>
 
-Components that has `wix-model` attribute can be initialized with default values or values that retrieved from your server.
+Component that has `wix-model` attribute can be initialized with default values or values that retrieved from your server.
 
     ...
     <div wix-model="showTweets" wix-ctrl="Checkbox"></div>
@@ -223,7 +223,7 @@ You can subscribe to changes in the wix-model with the following code:
     
 #### Save Wix.UI Model
 
-When you want to save the state of your components you can simply call the toJSON function on the **Wix.UI** to get it's current state. This saved json representation can be later used to (re)initialize the **Wix.UI**. E.g. you can save it in your database and read on next invocations of the App Settings.
+When you want to save the state of your components you can simply call the toJSON function on the **Wix.UI** to get its current state. This saved json representation can be later used to (re)initialize the **Wix.UI**. E.g. you can save it in your database and read on next invocations of the App Settings.
 
     var componentsValues = Wix.UI.toJSON();
 
@@ -252,7 +252,7 @@ When you want to save the state of your components you can simply call the toJSO
 
 ###Style Parameters
 
-Wix Style parameters, which replace the wix-model parameters, allow an app developer to save specfifc keys inside the Wix Site. Meaning, they do not need to be saved in the App's database like  wix-model parameters. **Wix.UI** takes care of saving it inside the site using the Wix SDK.
+Wix Style parameters, which replace the wix-model parameters, allow an app developer to save specific keys inside the Wix Site. Meaning, they do not need to be saved in the App's database like  wix-model parameters. **Wix.UI** takes care of saving it inside the site using the Wix SDK.
 
 You can use the `wix-param` attribute on supported components. Currently Wix supports the following Components for wix-param:
 - ColorPicker
@@ -266,7 +266,7 @@ wix-param can also be consumed inside the App's Widget/Page. You can use **Wix S
     
     var styleParams = Wix.getStyleParams(); // returns a map with all styles values
 
-###Style paramerters in a CSS stylesheet
+###Style parameters in a CSS stylesheet
 
 You can use the color style parameters inside a inline CSS style within your widget. It's a simple template engine that uses {{value}} to interpolate the style parameters. In order to activate it put `wix-style` attribute on an inline style.
 
@@ -277,10 +277,10 @@ You can use the color style parameters inside a inline CSS style within your wid
         }
     </style>
     
-Color style parameters can use reserved theme colors in the stylesheet using the following refrenecs:
+Color style parameters can use reserved theme colors in the stylesheet using the following references:
 
-* white/black - primary white, black if the site theme is invereted
-* black/white - primary black, white if the site theme is invereted
+* white/black - primary white, black if the site theme is inverted
+* black/white - primary black, white if the site theme is inverted
 * primary-1 - defaults to red
 * primary-2 - defaults to blue
 * primary-3 - defaults to yellow
@@ -315,7 +315,7 @@ Color style parameters can use reserved theme colors in the stylesheet using the
 
     <div wix-ctrl="ColorPicker"></div>
     
-#### Color picker with stlye parameter
+#### Color picker with style parameter
 
     <div wix-param="myColor" wix-ctrl="ColorPicker"></div>
     
@@ -323,7 +323,7 @@ Color style parameters can use reserved theme colors in the stylesheet using the
 
     <div wix-ctrl="ColorPickerWithOpacity"></div>
     
-#### Color picker with opacity with stlye parameter
+#### Color picker with opacity with style parameter
 
     <div wix-param="myColor" wix-ctrl="ColorPickerWithOpacity"></div>
 
